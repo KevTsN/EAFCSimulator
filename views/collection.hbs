@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title> EA Sports FC 24 </title>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Varela Round" rel="stylesheet">
+</head>
+<style>
+
+</style>
+
+<body>
+ <a href = '/' class="grow" style="font-weight: 900"><h1>EA Sports FC 24 </h1></a>
+    
+    <div class = "tooltip" style="position:fixed;">
+        <h4 id="tokens"> &#x1FA99 {{tokens}}</h4>
+         <span class="tooltiptext">Build squads to earn tokens. </span>
+    </div>
+
+    <div style = "position:fixed; right:10px;">
+        <h5 id = "nameDisplay"> Logged in as: {{username}}</h5>
+    </div>
+
+    <br></br>
+<!-- 
+    playerSpec is one player, i hope
+-->
+<div>
+    <div id="player" style="position: fixed;margin-left: 200px;float: left; width: 40%; text-align: center;  margin-top: 45px;"> 
+            {{#if playerSpec}}
+            <table class="playerTable" width = "100%">
+            <tr>
+                <td style="font-size: 75px" colspan = "2"> {{playerSpec.rating}}</td>
+                <td style="font-size: 75px" colspan = "2"> {{playerSpec.mainPos}}</td>
+            </tr>
+    
+            <tr>
+                <td style="font-size: 50px" colspan = "4">{{playerSpec.name}}</td>
+            </tr>
+    
+            <tr>
+                <td colspan = "4" style="font-size: 30px" >{{playerSpec.altPos}}</td> <!-- or allPos idk-->
+            </tr>
+
+            <tr>
+                <td colspan = "4"><img src="/images/nullImage.png" width="100" height="100"></td>
+            </tr>
+            </table>
+            {{/if}}
+        </div>
+
+        {{#unless players}}
+        <h4> No players found in collection. Open packs to get new ones. </h4>
+        {{/unless}}
+
+
+        <div class="tableDiv" id = "collection" style="position: relative; float: right; margin-right: 200px; width: 30%;text-align: center; overflow-y: scroll; height: 425px; margin-top: 45px;"> 
+            <table style = "width: 100%">
+            {{#each players}}
+
+                <tr class="player" style="background-color: var(--{{{this.color}}})">
+                <td style="width: 15%;">
+                    <a href = "/collection/id/{{this.id}}"> 
+                    <p>{{this.rating}}</p> 
+                    </a>
+                </td> 
+                <td style="width:70%;">
+                    <a href = "/collection/id/{{this.id}}"> 
+                    <p>{{this.name}}</p> 
+                    </a>
+                </td> 
+                <td style="width: 15%;">
+                    <a href = "/collection/id/{{this.id}}"> 
+                    <p>{{this.mainPos}}</p> 
+                    </a>
+                </td> 
+                </tr>
+            </a> 
+            {{/each}} 
+            </table>
+        </div>
+</div>
+
+    <a class = "redir" style="position: absolute; margin-left: 50px; bottom: 20px; margin-top: 400px;" href= '/'>Return To Home Screen</a>
+
+</body>
+</html>

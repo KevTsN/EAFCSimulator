@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> EA Sports FC 24 </title>    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Varela Round" rel="stylesheet">
+</head>
+
+<style> 
+
+</style>
+{{!-- from w3schools --}}
+
+<body>
+ <a href = '/' class="grow" style="font-weight: 900"><h1>EA Sports FC 24 </h1></a>
+
+    <div class = "tooltip" style="position:fixed;">
+        <h4 id="tokens"> &#x1FA99 {{tokens}}</h4>
+         <span class="tooltiptext">Build squads to earn tokens. </span>
+    </div>
+
+    <div style = "position:fixed; right:10px;">
+        <h5 id = "nameDisplay"> Logged in as: {{username}}</h5>
+    </div>
+
+    <div class = "wrapper">
+    <h3 style="font-weight:bold;"> Pack Results </h3>
+    </div>
+   <div class="tableDiv" id = "collection" style="margin-left: auto; margin-right: auto; width: 30%; text-align: center;overflow-y: scroll; overflow-x:scroll; height: fit-content;"> 
+        <table class="playerTable" style = "width: 100%">
+        {{#each results}}
+        
+        {{!-- prolly slow asf --}}
+            <tr class="player" style="background-color: var(--{{{this.color}}})">
+             <td style="width: 15%;">
+                <a class="playerA" href = "/collection/{{this.id}}"> 
+                <p>{{this.rating}}</p> 
+                </a>
+            </td> 
+               <td style="width:70%;">
+                <a class="playerA" href = "/collection/{{this.id}}"> 
+                <p>{{this.name}}</p> 
+                </a>
+            </td> 
+               <td style="width: 15%;">
+                <a class="playerA" href = "/collection/{{this.id}}"> 
+                <p>{{this.mainPos}}</p> 
+                </a>
+            </td> 
+            </tr>
+        </a> 
+        {{/each}} 
+        </table>
+    </div>
+    
+    <a class = "redir" style="position: absolute; margin-left: 50px; margin-bottom: 20px;" href= '/'>Return To Home Screen</a>
+
+</body>
+
+</html>

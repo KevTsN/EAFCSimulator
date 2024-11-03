@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> EA Sports FC 24 </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Varela Round" rel="stylesheet">
+</head>
+
+<style> 
+
+</style>
+{{!-- from w3schools --}}
+
+<body>
+ <a href = '/' class="grow" style="font-weight: 900"><h1>EA Sports FC 24 </h1></a>
+
+    <div class = "tooltip" style="position:fixed;">
+        <h4 id="tokens"> &#x1FA99 {{tokens}}</h4>
+         <span class="tooltiptext">Build squads to earn tokens. </span>
+    </div>
+
+    <div style = "position:fixed; right:10px;">
+        <h5 id = "nameDisplay"> Logged in as: {{username}}</h5>
+    </div>
+
+
+   <div class="tableDiv" id = "collection" style="margin-left: auto; margin-right: auto; width: 30%; text-align: center;overflow-y: scroll; overflow-x:scroll; height: fit-content;"> 
+        <table style = "width: 100%">
+        <th style="width:50%;">Username</th>
+        <th style="width:25%;">Password</th>
+        <th style="width:25%;">Tokens</th>
+        {{#each users}}
+            <tr >
+               <td style="width:50%;">
+                <p>{{this.username}}</p> 
+            </td> 
+
+            <td style="width: 25%;">
+                <p>{{this.password}}</p> 
+            </td>  
+               <td style="width: 25%%;"> 
+                <p>{{this.tokens}}</p> 
+            </td> 
+            </tr>
+        {{/each}} 
+        </table>
+    </div>
+    
+    <div style = "position:relative; right:10px; margin: auto;">
+        <div class="wrapper">
+        <h5 id = "nameDisplay"> Clearing data will remove all additionally registered users, and clear all guest card collections.</h5>
+        <a class="redir" href="/clear" style="background-color: rgb(255, 0, 166); color:rgb(255, 255, 255);">Clear Data</a>
+        </div>
+    </div>
+
+    <a class = "redir" style="position: absolute; margin-left: 50px; margin-bottom: 20px;" href= '/'>Return To Home Screen</a>
+
+    
+</body>
+
+</html>

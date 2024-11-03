@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> EA Sports FC 24 </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Varela Round" rel="stylesheet">
+</head>
+
+<style> 
+
+</style>
+{{!-- from w3schools --}}
+
+<body>
+ <a href = '/' class="grow" style="font-weight: 900"><h1>EA Sports FC 24 </h1></a>
+       
+    <div class = "tooltip" style="position:fixed;">
+        <h4 id="tokens"> &#x1FA99 {{tokens}}</h4>
+         <span class="tooltiptext">Build squads to earn tokens. </span>
+    </div>
+
+    <div style = "position:fixed; right:10px;">
+        <h5 id = "nameDisplay"> Logged in as: {{username}}</h5>
+    </div>
+
+
+        <div class="container" style="position: relative;">
+        <div class="wrapper">
+            {{#if players}}
+            <div id = "warnings">
+            <h3 style="font-weight: bold"> Before you build this squad...</h3>
+            <h2>Some things to note:</h2>
+            <p>1. You will lose the highest rated attacker, midfielder, and defender placed in the squad. This is irreversible. </p>
+            <p>2. You will receive a reward of tokens upon completion, proportionate to the total ratings of your players being entered. </p>
+            <p>3. Clicking on any button other than "Accept" will redirect you, and cancel squad building. This includes clicking players.</p>
+            </div>
+
+            <h3> Your Squad </h3>
+            <h3> {{formation}} </h3>
+            {{#each bestPlayers}}
+            <p>You will be losing {{this.rating}} OVR {{this.name}}.</p>
+            {{/each}}
+            <p>You will be earning &#x1FA99 {{reward}}.</p>
+
+        <div class="tableDiv" style="width: 40%; margin: auto; margin-top: 30px;">
+            <table style = "width: 100%; margin: auto;">
+            {{#each players}}
+
+                <tr class="player" style="background-color: var(--{{{this.color}}})">
+                <td style="width: 15%;">
+                    <a href = "/collection/id/{{this.id}}"> 
+                    <p>{{this.rating}}</p> 
+                    </a>
+                </td> 
+                <td style="width:70%;">
+                    <a href = "/collection/id/{{this.id}}"> 
+                    <p>{{this.name}}</p> 
+                    </a>
+                </td> 
+                <td style="width: 15%;">
+                    <a href = "/collection/id/{{this.id}}"> 
+                    <p>{{this.mainPos}}</p> 
+                    </a>
+                </td> 
+                </tr>
+            </a> 
+            {{/each}} 
+            </table>
+        </div>
+
+        <a class="redir" style="height: 25px; margin-top: 20px; position:relative;background-color: green; color: white;" href="/builder/id/{{bestIDs}}"> Accept</a>
+    
+        {{/if}}
+
+            {{#unless players}}
+                {{{missingStr}}}
+            
+            {{/unless}}
+
+        </div>
+        </div>
+
+        <br></br>
+<a class="redir" style="width: 150px; float: left; position: relative; margin-left: 50px; margin-bottom: 20px;" href="/builder"> Back </a>
+
+
+</body>
+
+</html>

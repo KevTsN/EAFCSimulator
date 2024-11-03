@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<style> 
+
+</style>
+{{!-- from w3schools --}}
+
+
+<head>
+    <title> EA Sports FC 24 </title>    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Varela Round" rel="stylesheet">
+</head>
+
+<body>
+ <a href = '/' class="grow" style="font-weight: 900"><h1>EA Sports FC 24 </h1></a>
+
+    <div class = "tooltip" style="position:fixed;">
+        <h4 id="tokens"> &#x1FA99 {{tokens}}</h4>
+         <span class="tooltiptext">Build squads to earn tokens. </span>
+    </div>
+
+    <div style = "position:fixed; right:10px;">
+        <h5 id = "nameDisplay"> Logged in as: {{username}}</h5>
+        <a class="redir" href="/register" style="background-color: orange; color:black">Create New User </a>
+    </div>
+
+
+    <div class="container" style="margin-top: 100px">
+        <div class="wrapper">
+                {{!-- Open Gold Pack --}}
+                <a class ="redir" style="background-color: gold; color: black;" href= '/packs/gold'>Open Gold Pack <br></br>&#x1FA99 23,000</a>
+                {{!-- Open Silver Pack --}}
+                <a class = "redir" style="background-color: rgb(247, 242, 242); color: black;" href= '/packs/silver'>Open Silver Pack <br></br>&#x1FA99 12,000</a>
+                {{!-- Open Bronze Pack --}}
+                <a class="redir" href= '/packs/bronze' style="background-color: rgb(202, 125, 61); color: black;"> Open Bronze Pack <br></br>&#x1FA99 7,000</a>
+            <br></br>
+                
+                <a class="redir" href= '/collection' style="color:white">Go To Collection </a>
+            <br></br>
+            <p> Number of Cards: {{{count}}}</p>
+            <p> Best Regular Card: {{{bestC}}} </p>
+        </div>
+    </div>
+
+
+    <div class="container" style="position: relative; margin: 85px;">
+        <div class="wrapper">
+            <img style="margin: auto; height: 50%; width: 50% z-index: 2;" src="images/fpitch.png">
+            <br></br>
+            <a class="redir" style="box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8); 
+            position: relative; top: -150px; background-color: rgba(39,142,12,255); color: white; z-index: 1;"
+             href= '/builder'>Build Squad</a>
+        </div>
+    </div>
+
+    <div class="container" style="position: relative; top: -150px;">
+        <div class = "wrapper" >
+            <a class = "redir" style="width: auto; color: black; 
+            background-color: aliceblue;"href= '/users'>View Users (Admin Privileges Needed)</a>
+        </div>
+    </div>
+
+
+    <div style="margin-bottom: 40px; position:relative; text-align: center">
+        This site is not officially affiliated with EA Sports, or any of their video games.
+    </div>
+</body>
+
+</html>
