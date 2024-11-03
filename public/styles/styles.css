@@ -1,0 +1,197 @@
+/* Your styles go in this file */
+
+html {
+    font-family: 'Varela Round'
+}
+
+body{
+    background-color:rgb(183, 179, 179)
+}
+
+img{
+    width: 50%;
+    height: 50%;
+}
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+
+#recipes {
+    text-align: justify;
+}
+
+.recipe {
+    width: 30%;
+    display: inline-block;
+    border: 1px solid grey;
+    margin: 15px;
+}
+
+.recipe img {
+    width: 100%;
+    height: 300px;
+}
+
+h2 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:focus {
+    text-decoration: none;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+button {
+    height: 35px;
+    color: white;
+    background-color: lightskyblue;
+    font-family: 'Roboto', sans-serif;
+}
+
+input {
+    padding-bottom: 7px;
+    padding-top: 7px;
+    padding-left: 5px;
+}
+
+
+a.redir:link, a:visited {
+    background-color: #f44336;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    white-space: normal;
+    border-radius: 10px;
+    width: 150px;
+  }
+
+  a.redir:hover, a:active {
+    background-color: red;
+  }
+  a.redir { 
+  transition: all .2s ease-in-out; 
+  }
+
+  a.redir:hover { 
+  transform: scale(1.1); 
+  }
+
+  .grow { 
+    transition: all .2s ease-in-out; 
+    }
+  
+    .grow:hover { 
+    transform: scale(1.1); 
+    }
+  .playerTable{
+    border-collapse: collapse;
+  }
+  table{
+    border-collapse: collapse;
+    border-radius: 15px;
+}
+
+tr.player:hover{
+  font-weight: bold;
+}
+
+:root {
+--bronze: rgb(202, 125, 61);
+--silver: rgb(247, 242, 242);
+--gold: gold;
+}
+
+.tableDiv{
+border-radius: 20px;
+height: fit-content;
+position: relative;
+overflow-x: auto;
+overflow-y: auto;
+}
+
+h1{
+    text-align: center;
+}
+
+h4{
+    margin-left: 40px;
+}
+h5{
+    margin-left: 50px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    display: none;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  /* scrollbar from w3schools */
+
+
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 100%;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 80%;
+    left: 75%;
+    margin-left: -70px;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  /*tooltip from w3schools as well*/
